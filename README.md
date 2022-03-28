@@ -20,6 +20,8 @@ KSY Smart Remote Control HAT for Raspberry Pi
  Sensirion SHT30-DIS-B2.5KS   
 I2Cデジタル温湿度センサーです。
 温度精度0.2°C、相対湿度精度2%RHです。工場出荷時に調整済みですので簡単に使用できます。
+I2Cアドレスは0x44です。  
+
 
 [SHT30-DIS-B](https://sensirion.com/jp/products/product-catalog/SHT30-DIS-B/ "SHT30-DIS-B")
 
@@ -27,7 +29,8 @@ I2Cデジタル温湿度センサーです。
 ### 絶対圧センサ   
  オムロン 2SMPB-02E  
 高精度・低消費電流の小型MEMS絶対圧センサです。I2C接続です。
-温度センサも内蔵しています。
+温度センサも内蔵しています。   
+I2Cアドレスは0x70です。
 
 [2SMPB-02E](https://omronfs.omron.com/ja_JP/ecb/products/pdf/CDSC-011A.pdf "2SMPB-02E")
 
@@ -39,6 +42,7 @@ I2Cデジタル温湿度センサーです。
 デジタル出力で検出できるので取り扱いが簡単になっています。検出距離や検出パターンはフレネルレンズである程度変更できます。   
 付属のフレネルレンズはSenba Sensing TechnologyのS9013です。
 
+GPIO9にT_OUT（移動方向検出出力）、GPIO10にD_OUT(コンパレータ出力)が接続されています。
 
 [焦電センサ IRA-S210ST01](https://www.murata.com/ja-jp/products/productdetail?partno=IRA-S210ST01 "IRA-S210ST01")   
 [焦電型赤外線センサ用アンプ IC BD9251FV-E2](./datasheet/bd9251fv-j.pdf "BD9251FV-E2")   
@@ -48,12 +52,16 @@ I2Cデジタル温湿度センサーです。
  VISHAY VEML7700-TT   
 0～120,000 lx のI2C環境光センサです。   
 
+I2Cアドレスは0x10です。
+
+
 [VEML7700](https://www.vishay.com/optical-sensors/list/product-84286/ "VEML7700")
 
 ### 赤外リモコン受光モジュール
  VISHAY TSOP38238    
 
 キャリア周波数38kHzの赤外リモコン受光モジュールです。
+GPIO4に接続されています。
 
 [TSOP38238](https://www.vishay.com/ir-receiver-modules/list/product-82491/ "TSOP38238")
 
@@ -63,15 +71,24 @@ I2Cデジタル温湿度センサーです。
 ### パワー赤外発光ダイオード
  OSRAM SFH 4726AS A01
 
-半値角75度(150度)、IF=1A時224mW/sr～280mW/srの広角ハイパワー赤外LEDです。Raspberry Pi Zeroシリーズでの使用を考慮し駆動電流は抵抗にて約500mAに制限しています。
+半値角75度(150度)、IF=1A時224mW/sr～280mW/srの広角ハイパワー赤外LEDです。
+GPIO11に接続されています。駆動はFETにて行っています。
+最大電流は1.5Aですが、Raspberry Pi Zeroシリーズでの使用を考慮し駆動電流は抵抗にて約500mAに制限しています。
 
 [SFH 4726AS A01](https://dammedia.osram.info/media/resource/hires/osram-dam-5710828/SFH%204726AS%20A01_EN.pdf "SFH 4726AS A01")
 
 ### フルカラーLED
 Everlight EASV3015RGBA0   
-アノードコモンのフルカラーLED（RGB LED）です。
+アノードコモンのフルカラーLED（RGB LED）です。   
+RED GPIO27, GREEN GPIO17, BLUE GPIO15 にFET経由で接続されています。
 
 [EASV3015RGBA0](https://everlightamericas.com/pcb/1336/easv3015rgba0.html "EASV3015RGBA0 ")
+
+### タクトスイッチ
+ Alps/Alpine SKRTLAE010
+サイドプッシュタイプのタクトスイッチです。GPIO14に接続されています。
+
+[SKRTLAE010](https://tech.alpsalpine.com/prod/j/html/tact/surfacemount/skrt/skrtlae010.html "SKRTLAE010")
 
 ### 使用GPIO
 | GPIO | 機能 | I/O |   
@@ -92,6 +109,10 @@ I2Cのセンサを追加するためのコネクタです。コネクタは未�
 
 各センサは基板上に直接実装しているためRaspberry Pi本体の発熱の影響を受けます。
 特にRaspberryPi 4Bではセンサの直下に発熱するチップ（CPU,メモリ、USBコントローラー等）があるためユーザにて断熱等の処理を行ってください
+
+### 回路図
+
+
 
 ## サンプルソフトウェア
 
