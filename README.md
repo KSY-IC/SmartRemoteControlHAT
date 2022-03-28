@@ -37,12 +37,12 @@ I2Cアドレスは0x70です。
 
 
 ### 焦電センサ   
- 村田 IRA-S210ST01 
+ 村田 IRA-S210ST01   
 ロームの焦電センサ向けアンプ BD9251FV-E2と組み合わせて人感センサを構成してあります。
 デジタル出力で検出できるので取り扱いが簡単になっています。検出距離や検出パターンはフレネルレンズである程度変更できます。   
 付属のフレネルレンズはSenba Sensing TechnologyのS9013です。
 
-GPIO9にT_OUT（移動方向検出出力）、GPIO10にD_OUT(コンパレータ出力)が接続されています。
+GPIO9にBD9251FVのT_OUT（移動方向検出出力）、GPIO10にBD9251FVのD_OUT(コンパレータ出力)が接続されています。
 
 [焦電センサ IRA-S210ST01](https://www.murata.com/ja-jp/products/productdetail?partno=IRA-S210ST01 "IRA-S210ST01")   
 [焦電型赤外線センサ用アンプ IC BD9251FV-E2](./datasheet/bd9251fv-j.pdf "BD9251FV-E2")   
@@ -60,7 +60,7 @@ I2Cアドレスは0x10です。
 ### 赤外リモコン受光モジュール
  VISHAY TSOP38238    
 
-キャリア周波数38kHzの赤外リモコン受光モジュールです。
+キャリア周波数38kHzの赤外リモコン受光モジュールです。学習リモコン機能等に使用できます。
 GPIO4に接続されています。
 
 [TSOP38238](https://www.vishay.com/ir-receiver-modules/list/product-82491/ "TSOP38238")
@@ -112,7 +112,7 @@ I2Cのセンサを追加するためのコネクタです。コネクタは未�
 
 ### 回路図
 
-
+[Schematics pdf](./schematics/smartRemoHAT.pdf "Schematics pdf")
 
 ## サンプルソフトウェア
 
