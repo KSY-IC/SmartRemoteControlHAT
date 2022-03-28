@@ -5,7 +5,7 @@ KSY Smart Remote Control HAT for Raspberry Pi
 ---
 ## 概要
 
-![Smart Remote Control HAT](./images/smartRemoHAT_1.png "Smart Remote Control HAT")   
+![Smart Remote Control HAT](./images/SmartRemoHAT_1.png "Smart Remote Control HAT")   
 
 
 スマートホーム向けのスマートリモコンHATです。
@@ -16,7 +16,8 @@ KSY Smart Remote Control HAT for Raspberry Pi
 ---
 ## ハードウェア
 
-### 温湿度センサ Sensirion SHT30-DIS-B2.5KS   
+### 温湿度センサ   
+ Sensirion SHT30-DIS-B2.5KS   
 I2Cデジタル温湿度センサーです。
 温度精度0.2°C、相対湿度精度2%RHです。工場出荷時に調整済みですので簡単に使用できます。
 
