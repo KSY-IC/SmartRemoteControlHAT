@@ -15,8 +15,8 @@ KSY Smart Remote Control HAT for Raspberry Pi
 
 ---
 ## ハードウェア
-
-### 温湿度センサ   
+![Smart Remote Control HAT PCB](./images/SmartRemoHAT_2.png "Smart Remote Control HAT PCB")  
+### 温湿度センサ U3  
  Sensirion SHT30-DIS-B2.5KS   
 I2Cデジタル温湿度センサーです。
 温度精度0.2°C、相対湿度精度2%RHです。工場出荷時に調整済みですので簡単に使用できます。
@@ -26,7 +26,7 @@ I2Cアドレスは0x44です。
 [SHT30-DIS-B](https://sensirion.com/jp/products/product-catalog/SHT30-DIS-B/ "SHT30-DIS-B")
 
 
-### 絶対圧センサ   
+### 絶対圧センサ U4  
  オムロン 2SMPB-02E  
 高精度・低消費電流の小型MEMS絶対圧センサです。I2C接続です。
 温度センサも内蔵しています。   
@@ -36,8 +36,8 @@ I2Cアドレスは0x70です。
 
 
 
-### 焦電センサ   
- 村田 IRA-S210ST01 
+### 焦電センサ U2   
+ 村田 IRA-S210ST01   
 ロームの焦電センサ向けアンプ BD9251FV-E2と組み合わせて人感センサを構成してあります。
 デジタル出力で検出できるので取り扱いが簡単になっています。検出距離や検出パターンはフレネルレンズである程度変更できます。   
 付属のフレネルレンズはSenba Sensing TechnologyのS9013です。
@@ -48,7 +48,7 @@ GPIO9にT_OUT（移動方向検出出力）、GPIO10にD_OUT(コンパレータ�
 [焦電型赤外線センサ用アンプ IC BD9251FV-E2](./datasheet/bd9251fv-j.pdf "BD9251FV-E2")   
 [Fresnel Lens S9013](https://www.senbasensor.com/products/motion-detect-module-plastic-fresnel-lens-s9003.html "Fresnel Lens S9013")   
 
-### 環境光センサ
+### 環境光センサ U5
  VISHAY VEML7700-TT   
 0～120,000 lx のI2C環境光センサです。   
 
@@ -57,7 +57,7 @@ I2Cアドレスは0x10です。
 
 [VEML7700](https://www.vishay.com/optical-sensors/list/product-84286/ "VEML7700")
 
-### 赤外リモコン受光モジュール
+### 赤外リモコン受光モジュール U1
  VISHAY TSOP38238    
 
 キャリア周波数38kHzの赤外リモコン受光モジュールです。
@@ -68,7 +68,7 @@ GPIO4に接続されています。
 
 
 
-### パワー赤外発光ダイオード
+### パワー赤外発光ダイオード DS2
  OSRAM SFH 4726AS A01
 
 半値角75度(150度)、IF=1A時224mW/sr～280mW/srの広角ハイパワー赤外LEDです。
@@ -77,14 +77,14 @@ GPIO11に接続されています。駆動はFETにて行っています。
 
 [SFH 4726AS A01](https://dammedia.osram.info/media/resource/hires/osram-dam-5710828/SFH%204726AS%20A01_EN.pdf "SFH 4726AS A01")
 
-### フルカラーLED
+### フルカラーLED DS1
 Everlight EASV3015RGBA0   
 アノードコモンのフルカラーLED（RGB LED）です。   
 RED GPIO27, GREEN GPIO17, BLUE GPIO15 にFET経由で接続されています。
 
 [EASV3015RGBA0](https://everlightamericas.com/pcb/1336/easv3015rgba0.html "EASV3015RGBA0 ")
 
-### タクトスイッチ
+### タクトスイッチ SW1
  Alps/Alpine SKRTLAE010
 サイドプッシュタイプのタクトスイッチです。GPIO14に接続されています。
 
@@ -102,7 +102,7 @@ RED GPIO27, GREEN GPIO17, BLUE GPIO15 にFET経由で接続されています。
 |GPIO17 | Green LED| Out |
 |GPIO15 | Blue LED | Out |
 
-### センサ追加用I2Cコネクタ
+### センサ追加用I2Cコネクタ J2
 I2Cのセンサを追加するためのコネクタです。コネクタは未実装ですのでユーザーでにて適当なコネクタを使用してください。
 
 ### センサ使用上の注意
@@ -112,6 +112,7 @@ I2Cのセンサを追加するためのコネクタです。コネクタは未�
 
 ### 回路図
 
+[Schematics pdf](./schematics/smartRemoHAT.pdf "Schematics pdf")
 
 
 ## サンプルソフトウェア
