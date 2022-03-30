@@ -26,7 +26,7 @@ I2Cデジタル温湿度センサーです。
 温度精度0.2°C、相対湿度精度2%RHです。工場出荷時に調整済みですので簡単に使用できます。
 I2Cアドレスは0x44です。  
 
-<img src ="./images/HumiTemp_sch.png" width=80%>
+<img src ="./images/HumiTemp_sch.png" width=80% alt="SHT30 Schematics">
 
 [SHT30-DIS-B メーカーホームページ](https://sensirion.com/jp/products/product-catalog/SHT30-DIS-B/)
 
