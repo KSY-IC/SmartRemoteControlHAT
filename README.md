@@ -10,6 +10,7 @@ KSY Smart Remote Control HAT for Raspberry Pi
 
 スマートホーム向けのスマートリモコンHATです。
 各種センサ、赤外線リモコン機能を持ち、オリジナルスマートリモコンを簡単に開発できます。
+また環境センサ、見守り装置などにも応用ができます。
 ミニHATサイズですので、Raspberry Pi Zero W/WH, Raspberry Pi Zero 2 Wと組み合わせるとコンパクトな構成になります。
 40Pin GPIOを持つRaspberry Pi 2/3/4と組み合わせることもできます。
 
