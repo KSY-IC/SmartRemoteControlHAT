@@ -121,7 +121,7 @@ RED GPIO27, GREEN GPIO17, BLUE GPIO15 にFET経由で接続されています。
 |GPIO9 | T_OUT Moving detection output| In |
 |GPIO10 | D_OUT Comparator output| In |  
 |GPIO11 | Ir Tx | Out |
-|GOIO14 | SW | In |
+|GPIO14 | SW | In |
 |GPIO27 | Red LED | Out |
 |GPIO17 | Green LED| Out |
 |GPIO15 | Blue LED | Out |
@@ -186,12 +186,12 @@ sudo systemctl start pigpiod
 * 赤外線リモコンの受信（学習）   
 
     * 学習させたいリモコンを準備します。
-    * 次のコードを実行します。   
+    * 次のコードを実行します(例はボタン3個分)。   
 
 ```
 python3 irrp.py -r -g4 -f btn_data b0 b1 b2 
 ```
-    GPIO4に接続された赤外線リモコン受信モジュールよりボタン3つ分btn_dataファイルに取り込みます。
+    GPIO4に接続された赤外線リモコン受信モジュールよりボタン3個分btn_dataファイルに取り込みます。
     画面の指示に従い、ボタンを2回ずつ押してデータを取り込みます。
 
 ![赤外リモコンデータ取り込み](./images/irRemoRx.png "赤外リモコンデータ取り込み")  
